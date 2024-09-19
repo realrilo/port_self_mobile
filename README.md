@@ -1,6 +1,4 @@
-# submission_flutter_pemula
-
-A new Flutter project.
+# sub_fl_portofolio
 
 ## Getting Started
 
