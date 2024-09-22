@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:submission_flutter_pemula/portofolio_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -10,15 +11,16 @@ class MainScreen extends StatelessWidget {
         title: const Text("Hello Im Rilo"),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Card(
+          const Card(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
                   radius: 60,
                   backgroundImage: NetworkImage(
-                    'https://raw.githubusercontent.com/realrilo/assets/refs/heads/main/mask_girl.jpg?token=GHSAT0AAAAAACWH7WR4WXKXHMXQYVMP6VDEZXPXYUA',
+                    'https://raw.githubusercontent.com/realrilo/assets/refs/heads/main/mask_girl.jpg?token=GHSAT0AAAAAACWH7WR4GARZHZWULKJFZGF4ZXPZ7PQ',
                   ),
                 ),
                 const Expanded(
@@ -47,7 +49,14 @@ class MainScreen extends StatelessWidget {
                 ),
               ],
             ),
-          ),
+          ), //image
+          OutlinedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return PortofolioScreen();
+                }));
+              },
+              child: const Text("Click for My Portofolio")),
           const SizedBox(
             height: 25,
           ),
@@ -68,7 +77,90 @@ class MainScreen extends StatelessWidget {
 
               textAlign: TextAlign.justify, // Mengatur text alignment
             ),
-          ),
+          ), //desc
+          const SizedBox(height: 16),
+          Container(
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: Colors.blue[200],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Tools',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 10), // Spasi antara judul dan icon
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // Icon TensorFlow
+                    Column(
+                      children: [
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=n3QRpDA7KZ7P&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=13441&format=png&color=000000',
+                          ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=lOqoeP2Zy02f&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    // Icon Power BI
+                    Flexible(
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 30,
+                            height: 30,
+                            child: Image.network(
+                              'https://img.icons8.com/?size=100&id=qYfwpsRXEcpc&format=png&color=000000',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // Icon Jupyter
+                    Flexible(
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 30,
+                            height: 30,
+                            child: Image.network(
+                              'https://img.icons8.com/?size=100&id=aR9CXyMagKIS&format=png&color=000000',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ), //tools
         ],
       ),
     );
