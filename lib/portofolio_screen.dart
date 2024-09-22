@@ -9,7 +9,13 @@ class PortofolioScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Rilo\'s Portofolio"),
       ),
-      body: ,
+      body: Row(
+        children: [
+          Expanded(
+            child: Image.asset(name),
+          )
+        ],
+      ),
     );
   }
 }
