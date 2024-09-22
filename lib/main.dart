@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:submission_flutter_pemula/main_screen.dart';
 import 'package:submission_flutter_pemula/portofolio_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.dark(primary: Colors.blue),
       ),
-      home: PortofolioScreen(),
+      home: MainScreen(),
     );
   }
 }
