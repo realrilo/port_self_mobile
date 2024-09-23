@@ -2,19 +2,72 @@ import 'package:flutter/material.dart';
 import 'data/project_portofolio.dart';
 import 'detail_screen.dart';
 
-class PortofolioScreen extends StatelessWidget {
+class PortofolioScreen extends StatefulWidget {
   const PortofolioScreen({super.key});
+
+  @override
+  _PortofolioScreenState createState() => _PortofolioScreenState();
+}
+
+class _PortofolioScreenState extends State<PortofolioScreen> {
+  String selectedFilter = "All";
+  List<ProjectPortofolio> filteredProjects = [];
+
+  @override
+  void initState() {
+    super.initState();
+    // Initially, show all projects sorted alphabetically
+    filteredProjects = List.from(projectPortofolioList);
+    filteredProjects.sort((a, b) => a.name.compareTo(b.name));
+  }
+
+  void _filterProjects(String filter) {
+    setState(() {
+      selectedFilter = filter;
+      if (filter == "All") {
+        filteredProjects = List.from(projectPortofolioList);
+      } else {
+        filteredProjects = projectPortofolioList
+            .where((project) => project.tipeProject == filter)
+            .toList();
+      }
+      filteredProjects.sort((a, b) => a.name.compareTo(b.name));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Rilo's Portfolio"),
+        title: const Text("Rilo's Portofolio"),
+        actions: [
+          // Icon button for filtering projects
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.filter_list), // Display filter icon
+            onSelected: (String filter) {
+              _filterProjects(filter); // Apply the selected filter
+            },
+            itemBuilder: (BuildContext context) {
+              return <String>[
+                "All",
+                "Business Intelligence",
+                "Data Analyst",
+                "Data Scientist",
+                "Machine Learning",
+              ].map<PopupMenuItem<String>>((String value) {
+                return PopupMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList();
+            },
+          ),
+        ],
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
-          // Access each project from the projectPortofolioList
-          final ProjectPortofolio project = projectPortofolioList[index];
+          // Access each filtered project
+          final ProjectPortofolio project = filteredProjects[index];
           return InkWell(
             onTap: () {
               // Navigate to DetailScreen when a project is tapped
@@ -82,7 +135,7 @@ class PortofolioScreen extends StatelessWidget {
             ),
           );
         },
-        itemCount: projectPortofolioList.length, // Number of projects
+        itemCount: filteredProjects.length, // Number of filtered projects
       ),
     );
   }
