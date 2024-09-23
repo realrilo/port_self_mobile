@@ -20,7 +20,7 @@ class MainScreen extends StatelessWidget {
                 CircleAvatar(
                   radius: 60,
                   backgroundImage: NetworkImage(
-                    'https://raw.githubusercontent.com/realrilo/assets/refs/heads/main/mask_girl.jpg?token=GHSAT0AAAAAACWH7WR4GARZHZWULKJFZGF4ZXPZ7PQ',
+                    'https://res.cloudinary.com/dd4uyxyju/image/upload/v1727079232/Mask_Adult_Hero_MO_uppt3c.jpg',
                   ),
                 ),
                 const Expanded(
