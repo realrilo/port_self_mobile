@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:submission_flutter_pemula/main_screen.dart';
 import 'package:submission_flutter_pemula/portofolio_screen.dart';
+import 'contact.dart';
 
 void main() {
   runApp(const MyApp());

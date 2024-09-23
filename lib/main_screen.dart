@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:submission_flutter_pemula/contact.dart';
 import 'package:submission_flutter_pemula/portofolio_screen.dart';
 
 class MainScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hello Im Rilo"),
+        title: const Text("Hi, There...I'm Rilo"),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,13 +51,27 @@ class MainScreen extends StatelessWidget {
               ],
             ),
           ), //image
-          OutlinedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return PortofolioScreen();
-                }));
-              },
-              child: const Text("Click for My Portofolio")),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              OutlinedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return PortofolioScreen();
+                    }));
+                  },
+                  child: const Text("Click for My Portofolio")),
+              OutlinedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return ContactMe();
+                    }));
+                  },
+                  child: const Text("Contact Me for more")),
+            ],
+          ),
           const SizedBox(
             height: 25,
           ),
@@ -127,34 +142,119 @@ class MainScreen extends StatelessWidget {
                     ),
 
                     // Icon Power BI
-                    Flexible(
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 30,
-                            height: 30,
-                            child: Image.network(
-                              'https://img.icons8.com/?size=100&id=qYfwpsRXEcpc&format=png&color=000000',
-                              fit: BoxFit.contain,
-                            ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=qYfwpsRXEcpc&format=png&color=000000',
+                            fit: BoxFit.contain,
                           ),
-                        ],
-                      ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=55251&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=9Kvi1p1F0tUo&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ],
                     ),
+
                     // Icon Jupyter
-                    Flexible(
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 30,
-                            height: 30,
-                            child: Image.network(
-                              'https://img.icons8.com/?size=100&id=aR9CXyMagKIS&format=png&color=000000',
-                              fit: BoxFit.contain,
-                            ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=aR9CXyMagKIS&format=png&color=000000',
+                            fit: BoxFit.contain,
                           ),
-                        ],
-                      ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=SruJhzn0nnLl&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=39907&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=117561&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=13406&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=CLvQeiwFpit4&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=7I3BjCqe9rjG&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.network(
+                            'https://img.icons8.com/?size=100&id=20906&format=png&color=000000',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
