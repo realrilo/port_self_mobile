@@ -41,7 +41,7 @@ class MainScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 8), // Spasi antara dua teks
                         Text(
-                          'Mahasiswa Semester 7 Universitas Gunadarma dengan passion ML dan Data Science.',
+                          'A 7th-semester student at Gunadarma University with a passion for Machine Learning and Data Science.',
                           style: TextStyle(fontSize: 12),
                         ),
                       ],
@@ -82,13 +82,9 @@ class MainScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: const Text(
-              'Saya Rilo Prianoko, seorang mahasiswa semester 7 di Universitas Gunadarma. Saya memiliki minat '
-              'yang besar dalam bidang Machine Learning, Data Science, serta pengembangan aplikasi berbasis '
-              'Flutter. Selain fokus pada akademik, saya juga memiliki pengalaman dalam mengerjakan proyek '
-              'berbasis deep learning untuk prediksi churn pelanggan dan klasifikasi gambar medis. '
-              'Saat ini, saya terus mengembangkan keterampilan saya dalam pemrograman dan teknologi data '
-              'untuk mencapai karir yang lebih baik di masa depan.',
-              style: TextStyle(fontSize: 14, color: Colors.black),
+              'I am Rilo Prianoko, a 7th-semester student at Gunadarma University. I have a strong interest in Machine Learning, Data Science, and Flutter-based application development. Besides focusing on academics, '
+              'I also have experience working on deep learning projects for customer churn prediction and medical image classification. Currently, I am continuously developing my skills in programming and data technology to achieve a better career in the future.',
+              style: TextStyle(fontSize: 15, color: Colors.black),
 
               textAlign: TextAlign.justify, // Mengatur text alignment
             ),
