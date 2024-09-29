@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ContactMe extends StatelessWidget {
   const ContactMe({super.key});
@@ -23,17 +24,19 @@ class ContactMe extends StatelessWidget {
                   const Text(
                     'Rilo Prianoko',
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Pacifico',
+                      fontSize: 30,
                       color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const Text(
+                  Text(
                     'Data Scientist',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white70,
-                    ),
+                    style: GoogleFonts.pirataOne(
+                        color: Colors.teal.shade100,
+                        fontSize: 20,
+                        letterSpacing: 2.5,
+                        fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     height: 20,
@@ -58,12 +61,14 @@ class ContactMe extends StatelessWidget {
                     color: Colors.white,
                     margin: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 25),
-                    child: const ListTile(
+                    child: ListTile(
                       leading: Icon(
                         Icons.email,
                         color: Colors.teal,
                       ),
-                      title: Text('prianoko11rilo@gmail.com'),
+                      title: Text(
+                        'prianoko11rilo@gmail.com',
+                      ),
                     ),
                   ),
                   Card(

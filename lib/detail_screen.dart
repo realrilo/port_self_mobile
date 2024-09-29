@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'data/project_portofolio.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 var informationTextStyle = const TextStyle(fontFamily: 'Oxygen');
 
@@ -23,10 +24,7 @@ class DetailScreen extends StatelessWidget {
                   child: Text(
                     project.name, // Display the project name
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 30.0,
-                      fontFamily: 'Staatliches',
-                    ),
+                    style: GoogleFonts.sofadiOne(fontSize: 20),
                   ),
                 ),
                 Container(
