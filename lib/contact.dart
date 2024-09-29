@@ -21,15 +21,9 @@ class ContactMe extends StatelessWidget {
                       'https://res.cloudinary.com/dd4uyxyju/image/upload/v1727079232/Mask_Adult_Hero_MO_uppt3c.jpg',
                     ),
                   ),
-                  const Text(
-                    'Rilo Prianoko',
-                    style: TextStyle(
-                      fontFamily: 'Pacifico',
-                      fontSize: 30,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  Text('Rilo Prianoko',
+                      style: GoogleFonts.pacifico(
+                          fontSize: 28, color: Colors.white54)),
                   Text(
                     'Data Scientist',
                     style: GoogleFonts.pirataOne(
@@ -45,10 +39,9 @@ class ContactMe extends StatelessWidget {
                       color: Colors.tealAccent,
                     ),
                   ),
-                  Card(
+                  const Card(
                     color: Colors.white,
-                    margin: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 25),
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                     child: const ListTile(
                       leading: Icon(
                         Icons.phone,
